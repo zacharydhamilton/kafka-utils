@@ -6,11 +6,19 @@
 
   <groupId>com.github.zacharydhamilton.kafka.common</groupId>
   <artifactId>kafka-utils</artifactId>
-  <version>1.0.0</version>
+  <version>v1.0.0</version>
 
   <name>kafka-utils</name>
   <!-- FIXME change it to the project's website -->
   <url>https://github.com/zacharydhamilton/kafka-utils</url>
+
+  <repositories>
+		<repository>
+			<id>confluent</id>
+			<name>Confluent</name>
+			<url>https://packages.confluent.io/maven/</url>
+		</repository>
+	</repositories>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -24,6 +32,17 @@
 			<groupId>org.apache.kafka</groupId>
 			<artifactId>kafka-clients</artifactId>
 			<version>${kafka.client.version}</version>
+		</dependency>
+    <!-- AVRO -->
+		<dependency>
+			<groupId>org.apache.avro</groupId>
+			<artifactId>avro</artifactId>
+			<version>1.11.0</version>
+		</dependency>
+		<dependency>
+			<groupId>io.confluent</groupId>
+			<artifactId>kafka-avro-serializer</artifactId>
+			<version>7.3.2</version>
 		</dependency>
     <dependency>
       <groupId>junit</groupId>
